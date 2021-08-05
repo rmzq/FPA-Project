@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #B0E0E6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Tampilan_AwalController">
+   <children>
+      <Pane layoutX="16.0" layoutY="277.0" prefHeight="118.0" prefWidth="718.0" style="-fx-background-color: B0C4DE;">
+         <children>
+            <GridPane layoutX="47.0" layoutY="22.0" prefHeight="75.0" prefWidth="625.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="175.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="175.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="121.0" minWidth="10.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="175.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <JFXButton onAction="#btn_loginkaryawan" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #4682B4;" text="Login Karyawan">
+                     <font>
+                        <Font name="Verdana Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="14.0" layoutY="10.0" onAction="#btn_loginmanajer" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #4682B4;" text="Login Manajer" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Verdana Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="14.0" layoutY="10.0" onAction="#btn_akunmanajer" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #4682B4;" text="Buat Akun Manajer" GridPane.columnIndex="4">
+                     <font>
+                        <Font name="Verdana Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <JFXButton layoutX="335.0" layoutY="411.0" onAction="#btn_exit" prefHeight="75.0" prefWidth="81.0" style="-fx-background-color: #4682B4;" text="Exit">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="249.0" fitWidth="300.0" layoutX="226.0" layoutY="14.0">
+         <image>
+            <Image url="@filegambar/FPA-FunMath-App-Logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

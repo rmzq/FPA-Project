@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #B0E0E6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Tampilan_homeController">
+   <children>
+      <GridPane layoutX="63.0" layoutY="213.0" prefHeight="75.0" prefWidth="625.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="175.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="175.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="121.0" minWidth="10.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="175.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <JFXButton onAction="#btn_logout" prefHeight="75.0" prefWidth="203.0" style="-fx-background-color: #4682B4;" text="Logout" GridPane.columnIndex="4" />
+            <JFXButton onAction="#btn_transaksi" prefHeight="75.0" prefWidth="187.0" style="-fx-background-color: #4682B4;" text="Transaksi" GridPane.columnIndex="2" />
+            <JFXButton onAction="#btn_barang" prefHeight="75.0" prefWidth="203.0" style="-fx-background-color: #4682B4;" text="Data Barang" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

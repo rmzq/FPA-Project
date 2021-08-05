@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #B0E0E6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Tampilan_transaksiController">
+   <children>
+      <JFXButton onAction="#btn_home" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #4682B4;" text="Kembali" />
+      <JFXTextField layoutX="8.0" layoutY="32.0" prefHeight="25.0" prefWidth="218.0" />
+      <JFXButton layoutX="241.0" layoutY="32.0" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #4682B4;" text="Cari" />
+      <TableView fx:id="tabel_Barang" layoutX="5.0" layoutY="65.0" prefHeight="193.0" prefWidth="318.0">
+        <columns>
+          <TableColumn fx:id="kodeBarang" prefWidth="99.0" text="Kode Barang" />
+          <TableColumn fx:id="namaBarang" prefWidth="90.0" text="Nama Barang" />
+            <TableColumn fx:id="harga" prefWidth="106.0" text="Harga" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tabelbrbeli" layoutX="364.0" layoutY="65.0" prefHeight="193.0" prefWidth="372.0">
+         <columns>
+            <TableColumn fx:id="kodebrbeli" prefWidth="99.0" text="Kode Barang" />
+            <TableColumn fx:id="namabrbeli" prefWidth="101.0" text="Nama Barang" />
+            <TableColumn fx:id="banyakbrbeli" prefWidth="64.0" text="Banyak" />
+            <TableColumn fx:id="subtotalbrbeli" prefWidth="64.0" text="Subtotal" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="241.0" layoutY="267.0" onAction="#btn_tambahbarang" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #4682B4;" text="Tambah" />
+      <JFXButton layoutX="653.0" layoutY="267.0" onAction="#btn_hapusbarang" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #4682B4;" text="Hapus" />
+      <JFXTextField fx:id="banyakbelibr" layoutX="142.0" layoutY="267.0" prefHeight="25.0" prefWidth="83.0" />
+      <Label layoutX="38.0" layoutY="267.0" prefHeight="25.0" prefWidth="68.0" text="Banyak Beli" />
+      <GridPane layoutX="364.0" layoutY="303.0" prefHeight="30.0" prefWidth="372.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="156.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="216.0" minWidth="10.0" prefWidth="216.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Banyak Bayar" />
+            <JFXTextField fx:id="banyakbayar" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <JFXButton layoutX="653.0" layoutY="339.0" onAction="#btn_bayar" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #4682B4;" text="Bayar" />
+      <JFXDatePicker fx:id="wkttransaksi" defaultColor="STEELBLUE" layoutX="619.0" layoutY="32.0" prefHeight="25.0" prefWidth="117.0" />
+      <Label layoutX="515.0" layoutY="32.0" prefHeight="25.0" prefWidth="117.0" text="Tanggal Transaksi" />
+      <Pane layoutX="450.0" layoutY="374.0" prefHeight="112.0" prefWidth="286.0" style="-fx-background-color: B0C4DE;">
+         <children>
+            <GridPane layoutX="14.0" layoutY="11.0" prefHeight="90.0" prefWidth="256.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="92.0" minWidth="10.0" prefWidth="89.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="8.0" prefWidth="8.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="160.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="56.0" prefWidth="100.0" text="TOTAL">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="54.0" prefWidth="100.0" text="BAYAR" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="53.0" prefWidth="100.0" text="KEMBALIAN" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="63.0" prefWidth="17.0" text=":" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="103.0" layoutY="10.0" prefHeight="63.0" prefWidth="17.0" text=":" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="103.0" layoutY="40.0" prefHeight="63.0" prefWidth="17.0" text=":" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tampiltotal" prefHeight="63.0" prefWidth="160.0" text="Label" GridPane.columnIndex="2" />
+                  <Label fx:id="tampilbayar" prefHeight="50.0" prefWidth="160.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label fx:id="tampilkembalian" prefHeight="83.0" prefWidth="160.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
